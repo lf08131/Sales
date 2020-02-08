@@ -1,0 +1,10 @@
+insert into TNVENTORY_COMMODITY values('001','001','ÑÆÁå',1000£¬100);
+insert into TNVENTORY_COMMODITY values('002','002','É³´ü',1000£¬190);
+insert into TNVENTORY_COMMODITY values('003','003','×ãÇò',1000£¬230);
+insert into TNVENTORY_COMMODITY values('004','004','ÀºÇò',1000£¬240);
+create table aaa(
+tatal int
+);
+create table aa(
+num int
+);

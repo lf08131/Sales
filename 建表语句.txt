@@ -1,0 +1,45 @@
+sqlplus /nolog
+conn /as sysdba
+alter user system account unlock;
+alter user system identified by system;
+conn system/system;
+show user;
+
+create table CUSTOMER_INFORMATION(
+CUSTOMER_CODE char(20), 
+CUSTOMER_NAME char(33),
+FULL_NAME char(33),
+ADDRESS char(20),
+ZIP_CODE char(20),
+TELEPHONE char(22));
+
+create table ORDER_INFORMATION(
+ORDER_NUMBER char(20), 
+ORDER_DATE char(33),
+CUSTOMER_CODE char(33),
+TRANSPORTATION_REQUIREMENTS char(20),
+MARK_OF_AVAILABILITY char(20),
+TRANSPORT_DATE char(33),
+CARGO_WEIGHT char(20),
+FREIGHT char(20),
+PAYMENT_LIST int);
+
+create table ORDER_DETAILS(
+RULE_NO char(20), 
+ORDER_NUMBER char(33),
+PRODUCT_CLASSIFICATION_NUMBER char(33),
+PRODUCTION_PLANT char(20),
+O_NUMBER int,
+TOTAL_AMOUNT int);
+drop table TNVENTORY_COMMODITY;
+create table TNVENTORY_COMMODITY(
+PRODUCT_CLASSIFICATION_NUMBER  char(33),
+MANUFACTURER_CODE char(33),
+COMMODIT_DESCRIPTION char(20),
+num int,
+UNIT_PRICE int);
+
+
+create table MANUFACTURER_INFORMATION(
+PRODUCTION_PLANT char(20)£¬
+MANUFACTUERE_NAME char(20));
